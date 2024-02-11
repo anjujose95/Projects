@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>"
+</head>
+<body>
+    <div id="screen" style="height: 300px;width:400px;background-color: blueviolet;"></div>
+    <button id="btn">Click me</button>
+    <input type="text" id="inp">
+    <label id="error">Enter minimum 4 characters</label>
+    
+    <script>
+        $(document).ready(function(){
+             $("#btn").click(function(){
+            $("#screen").toggle(3000)
+             })
+            $("#inp").blur(function(){
+                var tex=$(this).val()
+                if (tex.length<4){
+                    $("#error").show()
+                }
+                else{
+                    $("#error").hide()
+                }
+
+            })
+
+            
+        })
+    
+        </script>
+    
+</body>
+</html>
